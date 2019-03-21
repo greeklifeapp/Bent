@@ -29,6 +29,11 @@ plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
+package-lock.json
+package.json
+tsconfig.json
+tslint.json
+
 
 .DS_Store
 Thumbs.db
