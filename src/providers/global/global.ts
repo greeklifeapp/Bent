@@ -9,12 +9,12 @@ export class GlobalProvider {
 
   constructor(public http: HttpClient) {
     const config = {
-      apiKey: "AIzaSyDNs1AeJaJ7_yrZrlqaBc6UY4DTzKCzxMw",
-      authDomain: "testingjs-6c353.firebaseapp.com",
-      databaseURL: "https://testingjs-6c353.firebaseio.com",
-      projectId: "testingjs-6c353",
-      storageBucket: "testingjs-6c353.appspot.com",
-      messagingSenderId: "164663954733"
+      apiKey: "AIzaSyBZFKeQp82ctb6YY-g2vXoc0yhGowgt8JY",
+      authDomain: "bentjs-94631.firebaseapp.com",
+      databaseURL: "https://bentjs-94631.firebaseio.com",
+      projectId: "bentjs-94631",
+      storageBucket: "bentjs-94631.appspot.com",
+      messagingSenderId: "223233145097"
     };
     firebase.initializeApp(config);
 
