@@ -27,8 +27,16 @@ export class GlobalProvider {
     })
   }
 
-  auth = () => {
-    
+  auth = () =>{
+    let googleUser = gapi.auth2.getAuthInstance().signIn()
+      .then((res) => {
+        let token = res.getAuthResponse().id_token;
+        let creds = firebase.auth.GoogleAuthProvider.credential(token);
+        firebase.auth().signInWithCredential(creds)
+          .then(user => {
+            console.log(user)
+          })
+      }) 
   }
 
 }

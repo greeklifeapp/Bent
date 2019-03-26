@@ -12,8 +12,9 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public global: GlobalProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  auth = () => {
+    this.global.auth()
+    console.log('hello')
   }
 
 }
