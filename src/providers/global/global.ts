@@ -25,8 +25,10 @@ export class GlobalProvider {
         scope: "https://www.googleapis.com/auth/calendar",
       })
     })
+  }
 
-    console.log('he')
+  auth = () => {
+    
   }
 
 }
