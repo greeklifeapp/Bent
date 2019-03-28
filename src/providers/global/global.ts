@@ -18,6 +18,7 @@ export class GlobalProvider {
     };
     firebase.initializeApp(config);
 
+    //initialize google api (gapi)
     gapi.load('client:auth2', () => {
       gapi.client.init({
         apiKey: "AIzaSyADDwygDKqWmMNq8XAaz7gvqYh5lEAMRgc",
@@ -32,11 +33,11 @@ export class GlobalProvider {
       .then((res) => {
         let token = res.getAuthResponse().id_token;
         let creds = firebase.auth.GoogleAuthProvider.credential(token);
-        firebase.auth().signInWithCredential(creds)
-          .then(user => {
-            console.log(user)
+        firebase.auth().signInAndRetrieveDataWithCredential(creds)
+          .then((user)=>{
+            console.log(firebase.auth().currentUser)
           })
-      }) 
+      })
   }
 
 }

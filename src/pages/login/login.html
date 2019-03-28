@@ -2,11 +2,21 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>Login Page</h1>
-  <button id = "login" ion-button secondary (click)="auth()" class="mbsc-btn-block" [hidden]="calApiLoaded">Login with Google</button>
+  <div class = "container">
+    <div class="row justify-content-center text-center">
+        <h1>Login Page</h1>    
+    </div>
+    <div class="row justify-content-center text-center">
+        <button id = "login" ion-button secondary (click)="auth()" class="mbsc-btn-block" [hidden]="calApiLoaded">Login with Google</button>
+    </div>
+    <div class="row justify-content-center text-center">
+      <img src="" alt="" id = "profilePic">
+    </div>
+  </div>
+
 </ion-content>
