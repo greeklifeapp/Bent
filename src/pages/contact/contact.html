@@ -4,18 +4,28 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    <ion-title>Login</ion-title>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+	 <ion-fab href="https://docs.google.com/forms/d/1X56eDP2oHl5tNmkKsydOb5BhpPgLVTyxIMotL5OWRPc/viewform?edit_requested=true" vertical="bottom" horizontal="end" slot="fixed">
+	  <ion-icon name="question-mark"></ion-icon>
+    <ion-fab-button>Support</ion-fab-button>
+  </ion-fab>
+    <ion-title>Documents</ion-title>
+	</ion-toolbar>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
 
 <body>
+<ion-scroll scrollY="true" style="width: 100%; height: 85%;">
+<ion-content padding>
+
+
 
 
 <table class="tg">
@@ -175,5 +185,6 @@ Omega Application – Fall 2017</a></td>
     <td class="tg-11">Fraternity and Sorority Awards</td>
   </tr>
 </table>
+</ion-scroll>
 </body>
 </ion-content>
