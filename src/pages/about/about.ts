@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import firebase from 'firebase';
-
-
+import { ServicereqComponent } from '../../components/servicereq/servicereq';
 
 @Component({
   selector: 'page-about',
@@ -19,7 +18,7 @@ export class AboutPage {
   }
 
   onPlusClicked = () => {
-    console.log('plus clicked')
+    this.navCtrl.push(ServicereqComponent)
   }
 
 }

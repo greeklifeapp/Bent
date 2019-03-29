@@ -14,6 +14,7 @@ import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpModule } from '@angular/http';
+import { ServicereqComponent } from '../components/servicereq/servicereq';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    ServicereqComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { HttpModule } from '@angular/http';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    ServicereqComponent
   ],
   providers: [
     StatusBar,
