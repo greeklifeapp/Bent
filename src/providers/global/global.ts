@@ -6,6 +6,7 @@ declare var gapi: any;
 
 @Injectable()
 export class GlobalProvider {
+  public db: any;
 
   constructor(public http: HttpClient) {
     const config = {
@@ -26,6 +27,7 @@ export class GlobalProvider {
         scope: "https://www.googleapis.com/auth/calendar",
       })
     })
+
   }
 
   auth = () =>{

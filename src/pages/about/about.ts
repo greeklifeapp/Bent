@@ -10,11 +10,10 @@ import { ServicereqComponent } from '../../components/servicereq/servicereq';
 export class AboutPage {
 
   constructor(public navCtrl: NavController) {
-
+    this.navCtrl.swipeBackEnabled = true;
   }
 
   onFormSubmit = () => {
-    console.log('form submitted')
   }
 
   onPlusClicked = () => {

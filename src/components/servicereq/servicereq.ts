@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 /**
  * Generated class for the ServicereqComponent component.
@@ -12,12 +13,13 @@ import { Component } from '@angular/core';
 })
 export class ServicereqComponent {
 
-  text: string;
 
-  constructor() {
-    console.log('Hello ServicereqComponent Component');
-    this.text = 'Hello World';
+  constructor(public navCtrl: NavController) {
+   this.navCtrl.swipeBackEnabled = true;
   }
 
+  onFormSubmit = () => {
+    console.log('form submitted')
+  }
 }
  
