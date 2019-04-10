@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import firebase from 'firebase';
 
 /**
  * Generated class for the ServicereqComponent component.
@@ -13,7 +14,9 @@ import { NavController } from 'ionic-angular';
 })
 export class ServicereqComponent {
 
-  request = {}
+  request = {"user": firebase.auth().currentUser.displayName,
+             "email": firebase.auth().currentUser.email,
+            }
 
   constructor(public navCtrl: NavController) {
    this.navCtrl.swipeBackEnabled = true;
@@ -21,6 +24,8 @@ export class ServicereqComponent {
 
   onFormSubmit = () => {
     console.log(this.request)
+
+
   }
 }
  
