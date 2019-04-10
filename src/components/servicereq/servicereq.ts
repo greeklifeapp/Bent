@@ -17,6 +17,7 @@ export class ServicereqComponent {
 
   request = {"user": firebase.auth().currentUser.displayName,
              "email": firebase.auth().currentUser.email,
+             "id": Math.round(10000000000*Math.random())
             }
 
   constructor(public navCtrl: NavController) {
@@ -25,7 +26,7 @@ export class ServicereqComponent {
 
   onFormSubmit = () => {
     console.log(this.request)
-    firebase.database().ref('serviceRequests/' + Math.round(10000000*Math.random())).set(
+    firebase.database().ref('serviceRequests/' + this.request.id).set(
       this.request
     );
 

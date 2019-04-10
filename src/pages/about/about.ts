@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import firebase from 'firebase';
 import { ServicereqComponent } from '../../components/servicereq/servicereq';
 
@@ -13,11 +13,19 @@ export class AboutPage {
     this.navCtrl.swipeBackEnabled = true;
   }
 
-  onFormSubmit = () => {
+  ngOnInit() {
+    this.loadRequests()
   }
 
   onPlusClicked = () => {
     this.navCtrl.push(ServicereqComponent)
+  }
+
+  loadRequests = () => {
+    let ref = firebase.database().ref()
+    ref.once('value').then((item) => {
+      console.log(item)
+    })
   }
 
 }
