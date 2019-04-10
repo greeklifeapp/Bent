@@ -8,6 +8,7 @@ import firebase from 'firebase';
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
+
 @Component({
   selector: 'servicereq',
   templateUrl: 'servicereq.html'
@@ -24,7 +25,9 @@ export class ServicereqComponent {
 
   onFormSubmit = () => {
     console.log(this.request)
-
+    firebase.database().ref('serviceRequests/' + Math.round(10000000*Math.random())).set(
+      this.request
+    );
 
   }
 }
