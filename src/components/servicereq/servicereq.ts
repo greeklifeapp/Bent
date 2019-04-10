@@ -13,13 +13,14 @@ import { NavController } from 'ionic-angular';
 })
 export class ServicereqComponent {
 
+  request = {}
 
   constructor(public navCtrl: NavController) {
    this.navCtrl.swipeBackEnabled = true;
   }
 
   onFormSubmit = () => {
-    console.log('form submitted')
+    console.log(this.request)
   }
 }
  

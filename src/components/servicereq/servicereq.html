@@ -11,32 +11,32 @@
   <ion-content padding>
     <h1>New Service Request</h1>
     
-    <form padding-right>
+    <form (ngSubmit) = "onFormSubmit(form)" padding-right>
         <fieldset>
             
             <ion-item>
-            <ion-label position="floating">Event Name<p id = "required">*</p>:</ion-label>
-            <ion-input type="text" required></ion-input>
+                <ion-label position="floating">Event Name<p id = "required">*</p>:</ion-label>
+                <ion-input type="text" [(ngModel)] = 'request.name' [ngModelOptions] = "{standalone: true}" required></ion-input>
             </ion-item>
             <ion-item>
-            <ion-label position="floating">Event Date<p id = "required">*</p>:</ion-label>
-            <ion-input type="date"  required></ion-input>
+                <ion-label position="floating">Event Date<p id = "required">*</p>:</ion-label>
+                <ion-input type="date" [(ngModel)] = 'request.date' [ngModelOptions] = "{standalone: true}" required></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Start Time<p id = "required">*</p>:</ion-label>
-                <ion-input type = "time" required></ion-input>
+                <ion-input type = "time" [(ngModel)] = 'request.start' [ngModelOptions] = "{standalone: true}" required></ion-input>
             </ion-item>
             <ion-item>
-                    <ion-label position="floating">End Time<p id = "required">*</p>:</ion-label>
-                    <ion-input type = "time" required></ion-input>
+                <ion-label position="floating">End Time<p id = "required">*</p>:</ion-label>
+                <ion-input type = "time" [(ngModel)] = 'request.end' [ngModelOptions] = "{standalone: true}" required></ion-input>
                 </ion-item>
             <ion-item>
-                    <ion-label position="floating">Location<p id = "required">*</p>:</ion-label>
-                    <ion-input type = "text" required></ion-input>
+                <ion-label position="floating">Location<p id = "required">*</p>:</ion-label>
+                <ion-input type = "text" [(ngModel)] = 'request.location' [ngModelOptions] = "{standalone: true}" required></ion-input>
                 </ion-item>
             <ion-item>
                 <ion-label position="floating">Description:</ion-label>
-                <ion-textarea type = "text"></ion-textarea>
+                <ion-textarea type = "text" [(ngModel)] = 'request.description' [ngModelOptions] = "{standalone: true}"></ion-textarea>
             </ion-item>
             <button ion-button type="submit" block>Submit Request</button>
         </fieldset>
