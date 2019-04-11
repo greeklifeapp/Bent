@@ -24,7 +24,9 @@ export class AboutPage {
   loadRequests = () => {
     let ref = firebase.database().ref('serviceRequests')
     ref.on('value', (requestObj) => {
-      console.log(requestObj.val())
+      Object.values(requestObj.val()).forEach(
+        console.log
+      )
     })
   }
 
