@@ -22,9 +22,9 @@ export class AboutPage {
   }
 
   loadRequests = () => {
-    let ref = firebase.database().ref()
-    ref.once('value').then((item) => {
-      console.log(item)
+    let ref = firebase.database().ref('serviceRequests')
+    ref.on('value', (requestObj) => {
+      console.log(requestObj.val())
     })
   }
 
