@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -14,7 +15,6 @@ export class LoginPage {
 
   auth = () => {
     this.global.auth()
-    console.log('hello')
   }
 
 }

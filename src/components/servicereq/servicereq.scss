@@ -1,0 +1,14 @@
+servicereq {
+    .container { 
+        background-color: white;
+    }
+
+    #required {
+        color: red;
+        display: inline;
+    }
+
+    #bottomtext {
+        font-style: italic;
+    }
+}
