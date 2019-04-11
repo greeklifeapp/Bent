@@ -9,6 +9,8 @@ import { ServicereqComponent } from '../../components/servicereq/servicereq';
 })
 export class AboutPage {
 
+  private serviceRequests = [];
+
   constructor(public navCtrl: NavController) {
     this.navCtrl.swipeBackEnabled = true;
   }
@@ -24,9 +26,7 @@ export class AboutPage {
   loadRequests = () => {
     let ref = firebase.database().ref('serviceRequests')
     ref.on('value', (requestObj) => {
-      Object.values(requestObj.val()).forEach(
-        console.log
-      )
+      this.serviceRequests = Object.values(requestObj.val())
     })
   }
 
