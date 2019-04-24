@@ -22,7 +22,13 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
+body {
+	background-image: url("../assets/imgs/Chapel_of_the_Resurrection_Sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.9;
+	background-size: cover;
+}
 
 
 // Named Color Variables
