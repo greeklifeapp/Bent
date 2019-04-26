@@ -7,7 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-//import { FraternitiesPage } from '../pages/fraternities/fraternities';
+import { FraternitiesPage } from '../pages/fraternities/fraternities';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GlobalProvider } from '../providers/global/global';
@@ -24,7 +24,7 @@ import { ServicereqComponent } from '../components/servicereq/servicereq';
     HomePage,
     TabsPage,
     LoginPage,
-	//FraternitiesPage,
+	FraternitiesPage,
     ServicereqComponent
   ],
   imports: [
@@ -41,7 +41,7 @@ import { ServicereqComponent } from '../components/servicereq/servicereq';
     HomePage,
     TabsPage,
     LoginPage,
-	//FraternitiesPage,
+	FraternitiesPage,
     ServicereqComponent
   ],
   providers: [
