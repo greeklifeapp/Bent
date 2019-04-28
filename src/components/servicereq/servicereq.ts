@@ -39,6 +39,15 @@ export class ServicereqComponent {
 
   ionViewDidEnter(){
     console.log(this.requestList)
+
+    this.requestList.forEach((req => {
+      document.querySelector('#serviceRequests').innerHTML += `
+      <div>
+        ${req.name}        
+      </div>
+      
+      `
+    }))
   }
 
   onFormSubmit = () => {
