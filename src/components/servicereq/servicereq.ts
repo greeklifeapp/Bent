@@ -20,8 +20,25 @@ export class ServicereqComponent {
              "id": Math.round(10000000000*Math.random())
             }
 
+  requestList = [];
+
+
   constructor(public navCtrl: NavController) {
    this.navCtrl.swipeBackEnabled = true;
+  }
+
+  ionViewDidLoad() {
+    firebase.database().ref('serviceRequests/').on('value', snapshot => {
+      snapshot.forEach(snap => {
+        this.requestList.push(
+          snap.val()
+        )
+      })
+    })
+  }
+
+  ionViewDidEnter(){
+    console.log(this.requestList)
   }
 
   onFormSubmit = () => {
@@ -29,6 +46,8 @@ export class ServicereqComponent {
     firebase.database().ref('serviceRequests/' + this.request.id).set(
       this.request
     );
+
+    this.navCtrl.pop()
 
   }
 }
