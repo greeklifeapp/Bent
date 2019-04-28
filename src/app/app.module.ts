@@ -14,6 +14,19 @@ import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpModule } from '@angular/http';
+import { FcmProvider } from '../providers/fcm/fcm';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { Firebase } from '@ionic-native/firebase/ngx'
+
+const firebase = {
+  apiKey: "AIzaSyBZFKeQp82ctb6YY-g2vXoc0yhGowgt8JY",
+  authDomain: "bentjs-94631.firebaseapp.com",
+  databaseURL: "https://bentjs-94631.firebaseio.com",
+  projectId: "bentjs-94631",
+  storageBucket: "bentjs-94631.appspot.com",
+  messagingSenderId: "223233145097"
+};
 
 @NgModule({
   declarations: [
@@ -28,7 +41,9 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(firebase),
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +59,9 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalProvider,
-    HttpClientModule
+    HttpClientModule,
+    Firebase,
+    FcmProvider
   ]
 })
 export class AppModule {}
