@@ -2,18 +2,19 @@ page-login {
 }
 div.boundingbox {
 
-  width: 300px;
+  width: 100%;
   padding: 50px;
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
   background-color: rgba(204,204,204,0.7);
   text-align: center;
   border: 2x solid gold;
 }
 div.pos{
-  position: relative;
-  bottom: 50px;
-  top: 50px;
-  right: 50px;
-  left: 50px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  
 }
