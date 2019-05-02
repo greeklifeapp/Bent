@@ -12,7 +12,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public global: GlobalProvider) {
   }
-
+//Load login so other pages (primarily service page) has access to it
   auth = () => {
     this.global.auth()
   }

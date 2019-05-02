@@ -30,6 +30,7 @@ export class GlobalProvider {
 
   }
 
+	//Signin setup
   auth = () =>{
     let googleUser = gapi.auth2.getAuthInstance().signIn()
       .then((res) => {

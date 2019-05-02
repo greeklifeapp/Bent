@@ -13,6 +13,7 @@ import firebase from 'firebase';
   selector: 'servicereq',
   templateUrl: 'servicereq.html'
 })
+//Save request to the firebase database	
 export class ServicereqComponent {
 
   request = {"user": firebase.auth().currentUser.displayName,
